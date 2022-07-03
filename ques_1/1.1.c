@@ -1,8 +1,10 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include "coeffs.h"
+#include <math.h>
+#include <time.h>
+#include "../coeffs.h"
 
 int main(){
-uniform(1000000,"uni.dat");
+uniform("uni.dat",1000000);
 return 0;
 }

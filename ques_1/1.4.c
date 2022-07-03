@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include<stdlib.h>
-#include "coeffs.h"
+#include <math.h>
+#include <time.h>
+#include "../coeffs.h"
 int main(){
 
 printf("%lf\n",mean("uni.dat"));
