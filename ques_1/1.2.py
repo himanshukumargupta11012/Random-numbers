@@ -13,18 +13,17 @@ for x in X:
         if float(i)<=x:
             l+=1
     Y.append(l)
-Z=[]
-for x in X:
+def cdf_the(x):
     if x<0:
-        Z.append(0)
+        return 0
     if 0<=x<1:
-        Z.append(x)
+        return x
     if x>=1:
-        Z.append(1)
+        return 1
 
 Y=[i/len(uni) for i in Y]
 plt.plot(X,Y,'o')
-plt.plot(X,Z)
+plt.plot(X,[cdf_the(x) for x in X])
 plt.xlabel("x")
 plt.ylabel("$F_U(x)$")
 plt.grid()
