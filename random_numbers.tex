@@ -190,205 +190,6 @@ breaklines=true
 \vspace{3cm}
 %\usepackage{babel}
 \begin{document}
-	\tikzstyle{block} = [rectangle, draw,
-	text width=3em, text centered, minimum height=3em]
-	\tikzstyle{sum} = [draw, circle, node distance=3cm]
-	\tikzstyle{input} = [coordinate]
-	\tikzstyle{output} = [coordinate]
-	\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
-	
-	\theoremstyle{definition}
-
-	%\newtheorem{algorithm}{Algorithm}[section]
-	%\newtheorem{cor}{Corollary}
-
-	\bibliographystyle{IEEEtran}
-	%\bibliographystyle{ieeetr}
-	\providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr
-	\providecommand{\nPr}[2]{\,^{#1}P_{#2}} % nPr
-	\providecommand{\mbf}{\mathbf}
-	\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
-	\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
-	\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
-	\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
-	\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
-	\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
-	\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
-	\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
-	\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
-	\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
-	\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
-	\theoremstyle{remark}
-	
-	\providecommand{\abs}[1]{\left\vert#1\right\vert}
-	\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-	\providecommand{\norm}[1]{\left\Vert#1\right\Vert}
-	\providecommand{\mtx}[1]{\mathbf{#1}}
-	\providecommand{\mean}[1]{E\left[ #1 \right]}
-	\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
-	%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
-	\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
-
-	\providecommand{\gauss}[2]{\mathcal{N}\ensuremath{\left(#1,#2\right)}}
-	%
-	\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
-	\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
-	%\numberwithin{equation}{section}
-	%\numberwithin{problem}{subsection}
-	%\numberwithin{definition}{subsection}
-	\makeatletter
-	\@addtoreset{figure}{section}
-	\makeatother
-	\let\StandardTheFigure\thefigure
-	%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
-	\renewcommand{\thefigure}{\thesection}
-	%\numberwithin{figure}{subsection}
-	%\numberwithin{equation}{subsection}
-	%\numberwithin{equation}{section}
-	%\numberwithin{equation}{problem}
-	%\numberwithin{problem}{subsection}
-	\numberwithin{problem}{section}
-	%%\numberwithin{definition}{subsection}
-	%\makeatletter
-	%\@addtoreset{figure}{problem}
-	%\makeatother
-	\makeatletter
-	\@addtoreset{table}{section}
-	\makeatother
-	\let\StandardTheFigure\thefigure
-	\let\StandardTheTable\thetable
-	\let\vec\mathbf
-	\numberwithin{equation}{section}
-	\vspace{3cm}
-	\title{%Convex Optimization in Python
-		Random Numbers
-	}
-	%\title{
-		%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
-		%}
-	% paper title
-	% can use linebreaks \\ within to get better formatting as desired
-	%\title{Matrix Analysis through Octave}
-	%
-	%
-	% author names and IEEE memberships
-	% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
-	% a structure at a ~ so this keeps an author's name from being broken across
-	% two lines.
-	% use \thanks{} to gain access to the first footnote area
-	% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
-	% was not built to handle multiple paragraphs
-	%
-	\author{Mannem Charan - AI21BTECH11019}
-	\maketitle
-	\tableofcontents
-	\bigskip
-	\renewcommand{\thefigure}{\theenumi}
-	\renewcommand{\thetable}{\theenumi}
-	\begin{abstract}
-		This manual provides solutions for random numbers assignment.
-	\end{abstract}\tikzstyle{block} = [rectangle, draw,
-text width=3em, text centered, minimum height=3em]
-\tikzstyle{sum} = [draw, circle, node distance=3cm]
-\tikzstyle{input} = [coordinate]
-\tikzstyle{output} = [coordinate]
-\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
-
-\theoremstyle{definition}
-
-%\newtheorem{algorithm}{Algorithm}[section]
-%\newtheorem{cor}{Corollary}
-
-\bibliographystyle{IEEEtran}
-%\bibliographystyle{ieeetr}
-\providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr
-\providecommand{\nPr}[2]{\,^{#1}P_{#2}} % nPr
-\providecommand{\mbf}{\mathbf}
-\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
-\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
-\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
-\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
-\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
-\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
-\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
-\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
-\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
-\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
-\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
-\theoremstyle{remark}
-%\newtheorem{rem}{Remark}
-%\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-\providecommand{\abs}[1]{\left\vert#1\right\vert}
-\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-\providecommand{\norm}[1]{\left\Vert#1\right\Vert}
-\providecommand{\mtx}[1]{\mathbf{#1}}
-\providecommand{\mean}[1]{E\left[ #1 \right]}
-\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
-%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
-\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
-%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
-%\newcommand{\solution}{\noindent \textbf{Solution: }}
-%\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
-\providecommand{\gauss}[2]{\mathcal{N}\ensuremath{\left(#1,#2\right)}}
-%
-\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
-%\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
-%\numberwithin{equation}{section}
-%\numberwithin{problem}{subsection}
-%\numberwithin{definition}{subsection}
-\makeatletter
-\@addtoreset{figure}{section}
-\makeatother
-\let\StandardTheFigure\thefigure
-%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
-\renewcommand{\thefigure}{\thesection}
-%\numberwithin{figure}{subsection}
-%\numberwithin{equation}{subsection}
-%\numberwithin{equation}{section}
-%\numberwithin{equation}{problem}
-%\numberwithin{problem}{subsection}
-\numberwithin{problem}{section}
-%%\numberwithin{definition}{subsection}
-%\makeatletter
-%\@addtoreset{figure}{problem}
-%\makeatother
-\makeatletter
-\@addtoreset{table}{section}
-\makeatother
-\let\StandardTheFigure\thefigure
-\let\StandardTheTable\thetable
-\let\vec\mathbf
-\numberwithin{equation}{section}
-\vspace{3cm}
-\title{%Convex Optimization in Python
-Random Numbers
-}
-%\title{
-%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
-%}
-% paper title
-% can use linebreaks \\ within to get better formatting as desired
-%\title{Matrix Analysis through Octave}
-%
-%
-% author names and IEEE memberships
-% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
-% a structure at a ~ so this keeps an author's name from being broken across
-% two lines.
-% use \thanks{} to gain access to the first footnote area
-% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
-% was not built to handle multiple paragraphs
-%
-\author{Mannem Charan - AI21BTECH11019}
-\maketitle
-\tableofcontents
-\bigskip
-\renewcommand{\thefigure}{\theenumi}
-\renewcommand{\thetable}{\theenumi}
-\begin{abstract}
-This manual provides solutions for random numbers assignment.
-\end{abstract}
 \begin{tabular}{L{6cm} C{5cm} R{5cm} }
 	\definecolor{circleorange}{rgb}{1,0.17,0.08}
 \definecolor{darkorange}{rgb}{1,0.27,0.1}
@@ -601,7 +402,7 @@ wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/ques_
 Properties of PDF:
 \begin{enumerate}
 	\item It is always non-negative
-%	\item It is always bounded between 0 to 1
+	\item It is always bounded between 0 to 1
 	\item Always symmetric about the mean.
 	\item Maxima is observed at mean
 	\item Area under the curve of PDF is always equal to 1
@@ -810,9 +611,9 @@ F_T(t)=
 \end{figure}
 \eqref{tri_cdf} and \eqref{tri_pdf} respectively using following python code.
 \end{enumerate}
-\section{Maximul Likelihood}
-\begin{enumerate}[label=\thesection.\arabic*
-,ref=\thesection.\theenumi]
+
+
+\begin{comment}
 \item Generate 
 \begin{equation}
 Y = AX+N,
@@ -848,7 +649,11 @@ and
 \item
 Verify by plotting  the theoretical $P_e$.  
 		\end{enumerate}
+	
 \section{Gaussian to Other}
+
+	
+
 \begin{enumerate}[label=\thesection.\arabic*
 ,ref=\thesection.\theenumi]
 \item
@@ -860,7 +665,7 @@ V = X_1^2 + X_2^2
 
 \solution 
 Download the following files and run C and python program.
-CDF and PDF of V is plotted in fig. \ref{gau_gau_cdf} and \ref{gau_gau_pdf} respectively using below python code.
+CDF and PDF of V is plotted in fig. \ref{} and \ref{} respectively using below python code.
 \begin{lstlisting}
 wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/coeffs.h
 wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/ques_6/6.1.c
@@ -870,7 +675,7 @@ wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/ques_
 \begin{figure}
 	\centering
 	\includegraphics[width=\columnwidth]{./ques_6/gau_gau_cdf.png}
-	\caption{The CDF of $V$}
+	\caption{The DF of $V$}
 	\label{gau_gau_cdf}
 \end{figure}
 \begin{figure}
@@ -894,26 +699,9 @@ find $\alpha$.
 
 \solution Let 
 
-$X_1=R\cos\theta$, $X_2=R\sin\theta$
+$X_1=R\cos\theta$ ,$X_2=R\sin\theta$
+So,
 
-Now PDF of R,$\theta$ is given by
-\begin{align}
-	p_{R,\theta}\brak{r,\phi},=p_{X_1,X_2}\brak{x_1,x_2}|J|	
-\end{align}
-where J is jacobian matrix for transforming R,$\theta$ to $X_1,X_2$
-
-On solving,we get 
-\begin{align}
-J=R 	
-\end{align}
-
-
-and 
-since $X_1$ and $X_2$ are i.i.d.
-\begin{align}
-	\therefore
-p_{X_1,X_2}\brak{x_1,x_2}=p_{X_1}\brak{x_1}\times p_{X_2}\brak{x_2}
-\end{align}
 \item
 \label{ch3_raleigh_sim}
 Plot the CDF and PDf of
@@ -1017,4 +805,443 @@ with respect to the SNR from 0 to 10 dB.
 Obtain an expression for $P_e$. Verify this by comparing the theory and simulation plots on the same graph.
 %
 		\end{enumerate}
+\end{document}
+\end{comment}
+\section{Maximul Likelihood}
+
+\begin{enumerate}[label=\thesection.\arabic*
+	,ref=\thesection.\theenumi]
+
+\item Generate equiprobable $X \in \cbrak{1,-1}$.
+
+\solution Download the following files and execute the C file
+\begin{lstlisting}
+wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/ques_5/5.1.c
+wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/coeffs.h
+\end{lstlisting}
+\item Generate 
+\begin{equation}
+	Y = AX+N,
+\end{equation}
+where $A = 5$ dB,  and $N \sim \gauss{0}{1}$.
+\solution Download the following files and run the C code
+\begin{lstlisting}
+wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/ques_5/5.2.c
+wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/coeffs.h
+\end{lstlisting}
+\item Plot $Y$ using a scatter plot.
+
+\solution The scatter plot of Y is plotted in fig. \ref{scatter_plot} using below python code.
+\begin{lstlisting}
+wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/ques_5/5.3.py
+\end{lstlisting}
+\begin{figure}
+	\centering
+	\includegraphics[width=\columnwidth]{./ques_5/scatter_plot.png}
+	\caption{The scatter plot of $Y$}
+	\label{scatter_plot}
+\end{figure}
+\item Guess how to estimate $X$ from $Y$.
+
+\solution After seeing the scatter plot we can conclude that  if Y is positive then X will be 1 and if Y is negative then X will be -1.This conclusion also depends on value of A because if we decrease A the two parts of graph intermix and then we can't say anything.If A is approximately greater than 3 then only we can conclude this.
+\item
+\label{ml-ch4_sim}
+Find 
+\begin{equation}
+	P_{e|0} = \pr{\hat{X} = -1|X=1}
+\end{equation}
+and 
+\begin{equation}
+	P_{e|1} = \pr{\hat{X} = 1|X=-1}
+\end{equation}
+%
+\solution $\hat{X}$ is defined as
+
+
+\begin{align}
+	\hat{X}=
+\begin{cases}
+	1  &  Y\geq 0\\
+	-1 &  Y<0
+\end{cases}
+\end{align}
+So,
+\begin{align}
+	P_{e|0}&=\pr{\hat{X}=-1|X=1}\\
+	&=\pr{Y<0|X=1}\\
+	&=\pr{A\times 1+N<0}\\
+	&=\pr{N<-A}\\
+	&=F_N\brak{-A}\\
+	&=0
+\end{align}
+%	&=\int_{-\infty}^{-A}p_N\brak{x}dx\\
+%	&=\int_{-\infty}^{-A}\frac{1}{\sqrt{2\pi}}\exp\brak{%-\frac{x^2}{2}}dx
+and 
+\begin{align}
+	P_{e|1}&=\pr{\hat{X}=1|X=-1}\\
+	&=\pr{Y\geq0|X=-1}\\
+	&=\pr{A\times -1+N\geq0}\\
+	&=\pr{N\geq A}\\
+	&=1-\pr{N<A}\\
+	&=1-F_N\brak{A}\\
+	&=0
+\end{align}
+Download and run the following file to get coding proof
+\begin{lstlisting}
+wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/ques_5/5.5.py
+\end{lstlisting}
+\item Find $P_e$ assuming that $X$ has equiprobable symbols.
+
+\solution  $P_e$ can be defined as 
+\begin{align}
+	P_e&=\pr{X=-1}P_{e|1}+\pr{X=1}P_{e|0}\\
+	&\because P_{e|1}=0,P_{e|0}=0\\
+	&\therefore P_e=0
+\end{align}
+
+\item
+Verify by plotting  the theoretical $P_e$ with respect to $A$ from 0 to 10 dB.  
+
+\solution X is equiprobable.So
+\begin{align}
+	\because& \pr{X=1}=\pr{X=-1},\\
+	&\pr{X=1}+\pr{X=-1}=1\\
+\therefore&	\pr{X=1}=\pr{X=-1}=1/2
+\end{align}
+Now,$P_e$ is given by
+\begin{align}
+	P_e&=\pr{X=-1}P_{e|1}+\pr{X=1}P_{e|0}\\
+	P_e&=\frac{1}{2}\brak{1-F_N\brak{A}}+\frac{1}{2}\brak{F_N\brak{-A}}
+\end{align}
+Now, the plot of $P_e$ w.r.t. A is in fig. \ref{p_e_the} by plotting the above function using following code
+\begin{lstlisting}
+wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/ques_5/5.7.py
+\end{lstlisting} 
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{./ques_5/p_e_the.png}
+\caption{$P_e$ graph wrt A}
+\label{p_e_the}
+\end{figure}
+\item Now, consider a threshold $\delta$  while estimating $X$ from $Y$. Find the value of $\delta$ that maximizes the theoretical $P_e$.
+
+\solution Taking threshold as $\delta$ we get
+\begin{align}
+	P_{e|0}&=\pr{Y<\delta| X=1}\\
+	&=\pr{A\times 1+N<\delta}\\
+	&=\pr{N<-A+\delta}\\
+	&=F_N\brak{-A+\delta}
+\end{align}
+and \begin{align}
+	P_{e|1}&=\pr{Y\geq \delta|X=-1}\\
+	&=\pr{A\times -1+N\geq \delta}\\
+	&=\pr{N\geq A+\delta}\\
+	&=1-\pr{N<A+\delta}\\
+	&=1-F_N\brak{A+\delta}
+\end{align}
+and $P_e$ is defined as 
+\begin{align}
+	P_e &=\pr{X=-1}P_{e|1}+\pr{X=1}P_{e|0}\\
+	&=\frac{1}{2}\brak{1-F_N\brak{A+\delta}+F_N\brak{-A+\delta}}
+\end{align}
+Now we differentiate $P_e$ and equate it to 0 to get $\delta$  that minimizes the $P_e$.So,
+\begin{align}
+&\frac{d}{d\delta}P_e=\frac{1}{2}\brak{\frac{d}{d\delta} F_N\brak{-A+\delta}-\frac{d}{d\delta} F_N\brak{A+\delta}}=0\\
+&\implies p_N\brak{-A+\delta}-p_N\brak{A+\delta}=0\\
+&\implies \exp\brak{-\frac{\brak{-A+\delta}^2}{2}}-\exp\brak{-\frac{\brak{A+\delta}^2}{2}}=0\\
+&\implies \delta=0
+\end{align}
+
+Now we have to check that $\delta$=0 is for maxima or minima by double differentiating it.
+So,
+\begin{align}
+	\frac{d^2}{d\delta^2}|_{\delta=0}&=2A\exp\brak{\frac{-A^2}{2}}\\
+	&=10\exp\brak{\frac{-A^2}{2}}
+	&>0
+\end{align}
+Double derivative is positive.
+So,$\delta$=0 will give minima of $P_e$
+
+Plot of $P_e$ w.r.t. $\delta$ is plotted in fig. \ref{p_e_del} using following code
+\begin{lstlisting}
+wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/ques_5/5.8.py
+\end{lstlisting}
+\begin{figure}
+	\centering
+	\includegraphics[width=\columnwidth]{./ques_5/p_e_del.png}
+	\caption{$P_e$ graph wrt $\delta$}
+	\label{p_e_del}
+\end{figure}
+%&=\frac{1}{2}\brak{\frac{erfc(\brak{A+\delta}/\sqrt{2})}{2}}\\
+%&+\frac{1}{2}\brak{-\frac{erfc\brak{\brak{-A+\delta}/\sqrt{2}}}{2}+1}
+\item Repeat the above exercise when 
+\begin{align}
+	p_{X}(0) = p
+\end{align}
+\solution 
+\begin{align}
+\because	\pr{X=1}&=p_X\brak{0}=p\\
+\therefore\pr{X=-1}&=1-\pr{X=1}\\
+&=1-p
+\end{align}
+and $P_e$ is given by 
+\begin{align}
+	P_e &=\pr{X=-1}P_{e|1}+\pr{X=1}P_{e|0}\\
+	&=\brak{1-p}\brak{1-F_N\brak{A+\delta}}\\
+	&+pF_N\brak{-A+\delta}
+\end{align}
+Then,
+\begin{align}
+	&\frac{d}{d\delta}P_e=p\frac{d}{d\delta} F_N\brak{-A+\delta}\\
+	&-\brak{1-p}\frac{d}{d\delta} F_N\brak{A+\delta}=0\\
+	&\implies p\times p_N\brak{-A+\delta}\\
+	&-\brak{1-p}p_N\brak{A+\delta}=0\\
+	&\implies p\times \exp\brak{-\frac{\brak{-A+\delta}^2}{2}}
+	\\&-\brak{1-p}\exp\brak{-\frac{\brak{A+\delta}^2}{2}}=0\\
+	&\implies \delta=\frac{\log\brak{\frac{1}{p}-1}}{2A}
+\end{align}
+\item Repeat the above exercise using the MAP criterion.
+
+\solution From bayes theorem we can write,
+\begin{align}
+&\pr{X=1|Y=y}\\
+&=\frac{\pr{Y=y|X=1}\pr{X=1}}{\pr{Y=y}}\\
+&=\frac{\pr{N=y-A}p}{\pr{N=y-A}p+\pr{N=y+A}\brak{1-p}}\\
+&=\frac{p_N\brak{y-A}p}{p_N\brak{y-A}p+p_N\brak{y+A}\brak{1-p}}\\
+&=\frac{p}{p+\brak{1-p}\exp\brak{-2Ay}}
+\end{align}
+%\frac{\pr{A\times1+N=0}p}
+
+	\begin{align}
+&\pr{X=-1|Y=0}\\
+&=1-\pr{X=1|Y=0}\\
+&=1-\frac{p}{p+\brak{1-p}\exp\brak{-2Ay}}\\
+&=\frac{\brak{1-p}\exp\brak{-2Ay}}{p+\brak{1-p}\exp\brak{-2Ay}}\\
+&=\frac{1-p}{p\exp\brak{2Ay}+1-p}
+	\end{align}
+\end{enumerate}
+\section{Gaussian to Other}
+\begin{enumerate}[label=\thesection.\arabic*
+,ref=\thesection.\theenumi]
+\item
+Let $X_1 \sim  \gauss{0}{1}$ and $X_2 \sim  \gauss{0}{1}$. Plot the CDF and PDF of
+%
+\begin{equation}
+	V = X_1^2 + X_2^2
+\end{equation}
+\solution 
+Download the following files and run C and python program.
+CDF and PDF of V is plotted in fig. \ref{gau_gau_cdf} and \ref{gau_gau_pdf} respectively using below python code.
+\begin{lstlisting}
+wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/coeffs.h
+wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/ques_6/6.1.c
+wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/ques_6/6.1.py
+\end{lstlisting}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\columnwidth]{./ques_6/gau_gau_cdf.png}
+	\caption{The CDF of $V$}
+	\label{gau_gau_cdf}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=\columnwidth]{./ques_6/gau_gau_pdf.png}
+	\caption{The PDF of $V$}
+	\label{gau_gau_pdf}
+\end{figure}
+\item
+If
+%
+\begin{equation}
+	F_{V}(x) = 
+	\begin{cases}
+		1 - e^{-\alpha x} & x \geq 0 \\
+		0 & x < 0,
+	\end{cases}
+\end{equation}
+%
+find $\alpha$.
+
+\solution Let 
+
+$X_1=R\cos\theta$ ,$X_2=R\sin\theta$
+
+So,
+PDF of R and $\theta$ is given by 
+\begin{align}
+	p_{R,\theta}\brak{r,\phi}=p_{X_1,X_2}\brak{x_1,x_2}|J|
+\end{align} 
+where J is jacobian matrix transforming R,$\theta$ to $X_1,X_2$
+
+On soving we get jacobian,J=R.
+So,
+\begin{align}
+	p_{R,\theta}\brak{r,\phi}=p_{X_1,X_2}\brak{x_1,x_2}r
+\end{align} 
+since $X_1$ and $X_2$ are i.i.d. and gaussian random variable,$\gauss{0}{1}$.So,
+\begin{align}
+	p_{R,\theta}\brak{r,\phi}&=p_{X_1}\brak{x_1}p_{X_2}\brak{x_2}r\\
+	&=\frac{1}{\sqrt{2\pi}}\exp\brak{-\frac{x_1^2}{2}}\frac{1}{\sqrt{2\pi}}\exp\brak{-\frac{x_2^2}{2}}r\\
+	&=\frac{1}{2\pi}\exp\brak{-\frac{r^2}{2}}r
+\end{align}
+Now PDF of R,
+\begin{align}
+	p_R\brak{r}&=\int_0^{2\pi}p_{R,\theta}\brak{r,\phi}d\phi\\
+	&=\int_0^{2\pi} \frac{1}{2\pi}\exp\brak{-\frac{r^2}{2}}rd\phi\\
+	&=\exp\brak{-\frac{r^2}{2}}r
+\end{align}
+and
+\begin{align}
+	V=X_1^2 + X_2^2=R^2
+\end{align}
+Since $V=R^2>0$
+
+So,CDF and PDF would be zero for v$<$0
+
+%So,PDF of V,
+%\begin{align}
+%p_V\brak{v}&=\pr{V=v}\\
+%&=\pr{R^2=v}\\
+%&=\pr{R=\sqrt v}\\
+%&=p_R\brak{\sqrt{v}}\\
+%&=\exp\brak{-\frac{v}{2}}\sqrt v
+%\end{align}
+%Then CDF of V,
+%\begin{align}
+%F_V\brak{v}&=\int_{-\infty}^v p_V\brak{v}dv\\
+%&=\int_{-\infty}^v \exp\brak{-\frac{v}{2}}\sqrt v dv
+%\end{align}
+Then CDF of V for v$\geq$0, 
+\begin{align}
+F_V\brak{v}&=\pr{V\leq v}\\
+&=\pr{R^2\leq v}\\
+&=\pr{R\leq \sqrt v}\\
+&=F_R\brak{\sqrt v}\\
+&=\int_{-\infty}^{\sqrt v} p_R\brak{r}dr\\
+&=0+\int_{0}^{\sqrt v}\exp\brak{-\frac{r^2}{2}}r dr\\
+&=1-\exp\brak{-\frac{v}{2}}
+\end{align}
+Comparing the 2 equations we get 
+\begin{align}
+	\alpha=\frac{1}{2}
+\end{align}
+and PDF is given by
+\begin{align}
+	p_V\brak{v}&=\frac{d}{dx}F_V\brak{v}\\
+	\therefore p_V\brak{v}&=\begin{cases}
+		\frac{\exp\brak{-\frac{v}{2}}}{2}& v\geq 0\\
+		0  & v<0
+	\end{cases}
+\end{align}
+
+\item
+\label{ch3_raleigh_sim}
+Plot the CDF and PDf of
+%
+\begin{equation}
+	A = \sqrt{V}
+\end{equation}
+\solution
+CDF and PDF of A is plotted in fig. \ref{} and \ref{} respectively using below python code.
+\begin{lstlisting}
+wget https://github.com/himanshukumargupta11012/Random-Numbers/blob/master/ques_6/6.3.py
+\end{lstlisting}
+We know that 
+\begin{align}
+	V&=R^2\\
+\therefore A&= \sqrt V=R
+\end{align}
+
+\end{enumerate}
+\section{Conditional Probability}
+\begin{enumerate}[label=\thesection.\arabic*
+,ref=\thesection.\theenumi]
+\item
+\label{ch4_sim}
+Plot 
+\begin{equation}
+	P_e = \pr{\hat{X} = -1|X=1}
+\end{equation}
+%
+for 
+\begin{equation}
+	Y = AX+N,
+\end{equation}
+where $A$ is Raleigh with $E\sbrak{A^2} = \gamma, N \sim \gauss{0}{1}, X \in \brak{-1,1}$ for $0 \le \gamma \le 10$ dB.
+%
+\item
+Assuming that $N$ is a constant, find an expression for $P_e$.  Call this $P_e(N)$
+%
+\item
+%
+\label{ch4_anal}
+For a function $g$,
+\begin{equation}
+	E\sbrak{g(X)} = \int_{-\infty}^{\infty}g(x)p_{X}(x)\, dx
+\end{equation}
+%
+Find $P_e = E\sbrak{P_e(N)}$.
+%
+\item
+Plot $P_e$ in problems \ref{ch4_sim} and \ref{ch4_anal} on the same graph w.r.t $\gamma$.  Comment.
+\end{enumerate}
+\section{Two Dimensions}
+Let 
+\begin{equation}
+\mbf{y} = A\mbf{x} + \mbf{n},
+\end{equation}
+where 
+\begin{align}
+x &\in \brak{\mbf{s}_0,\mbf{s}_1}, 
+\mbf{s}_0 = 
+\begin{pmatrix}
+	1 
+	\\
+	0
+\end{pmatrix},
+\mbf{s}_1 = 
+\begin{pmatrix}
+	0 
+	\\
+	1
+\end{pmatrix}
+\\
+\mbf{n} &= 
+\begin{pmatrix}
+	n_1
+	\\
+	n_2
+\end{pmatrix},
+n_1,n_2 \sim \gauss{0}{1}.
+\end{align}
+%
+\begin{enumerate}[label=\thesection.\arabic*
+,ref=\thesection.\theenumi]
+%%
+\item
+\label{ch5_fsk}
+Plot 
+%
+\begin{equation}
+	\mbf{y}|\mbf{s}_0 \text{ and } \mbf{y}|\mbf{s}_1
+\end{equation}
+%
+on the same graph using a scatter plot.
+%
+\item
+For the above problem, find a decision rule for detecting the symbols $\mbf{s}_0 $ and $\mbf{s}_1$.
+%
+\item
+Plot 
+\begin{equation} 
+	P_e = \pr{\hat{\mbf{x}} = \mbf{s}_1|\mbf{x} = \mbf{s}_0}
+\end{equation}
+with respect to the SNR from 0 to 10 dB.
+%
+\item
+Obtain an expression for $P_e$. Verify this by comparing the theory and simulation plots on the same graph.
+%
+\end{enumerate}
 \end{document}

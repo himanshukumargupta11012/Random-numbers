@@ -2,6 +2,7 @@ from re import T
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 file=open("tri.dat","r")
 file=file.readlines()
 

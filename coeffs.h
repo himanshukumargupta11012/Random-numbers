@@ -2,13 +2,14 @@ void uniform(char*file,int len);
 float mean(char*file);
 float variance(char*file);
 void gaussian(char*file,int len);
-void triangular(char*file,int len);
+void triangular(char*file,char*file2,char*file3,int len);
 void bernoulli(char*file,int len);
 void gau_gau(char*file,char* file2,char*file3,int len);
 
 void uniform(char*file,int len){
 FILE*fp;
 fp=fopen(file,"w");
+// srand(time(0));
 for(int i=0;i<len;i++){
 
 fprintf(fp,"%lf\n",(double)rand()/RAND_MAX);
@@ -73,18 +74,41 @@ void rayleigh(char *file,char*file2,int len){
     }
     fclose(fp);
 }
-void triangular(char*file,int len){
+// void triangular(char*file,char*file2,char*file3,int len){
+//     FILE*fp=fopen(file,"w");
+//     FILE*fp2=fopen(file2,"r");
+//     FILE*fp3=fopen(file3,"r");
+//     char str[20],str2[20];
+//     for(int i=0;i<len;i++){
+//         fprintf(fp,"%lf\n",atof(fgets(str,sizeof(str),fp2))+atof(fgets(str2,sizeof(str2),fp3)));
+//     }
+//     fclose(fp);
+//     fclose(fp2);
+//     fclose(fp);
+
+
+// }
+void triangular(char*file,char*file2,char*file3,int len){
+    uniform(file2,len);
+    uniform(file3,len);
+
     FILE*fp=fopen(file,"w");
+    FILE*fp2=fopen(file2,"r");
+    FILE*fp3=fopen(file3,"r");
+    char str[20],str2[20];
     for(int i=0;i<len;i++){
-        fprintf(fp,"%lf\n",(float)rand()/RAND_MAX+(float)rand()/RAND_MAX);
+        fprintf(fp,"%lf\n",atof(fgets(str,sizeof(str),fp2))+atof(fgets(str2,sizeof(str2),fp3)));
     }
     fclose(fp);
+    fclose(fp2);
+    fclose(fp);
+
 }
 void bernoulli(char*file,int len){
     FILE*fp=fopen(file,"w");
     int m;
     for(int i=0;i<len;i++){
-        float t=(float)rand()/RAND_MAX;
+        double t=(double)rand()/RAND_MAX;
         
         if (t<.5) m= -1;
         if(t>=.5) m=1;
@@ -100,7 +124,7 @@ void ber_gau(char*file,char*file2,char*file3,int len){
     char str[20],str2[20];
     int A=5;
     for(int i=0;i<len;i++){
-        fprintf(fp,"%lf\n",A*atof(fgets(str,sizeof(str),fp2))+atof(fgets(str2,sizeof(str2),fp3)));
+        fprintf(fp,"%lf\n",A*atoi(fgets(str,sizeof(str),fp2))+atof(fgets(str2,sizeof(str2),fp3)));
     }
 
     fclose(fp);
