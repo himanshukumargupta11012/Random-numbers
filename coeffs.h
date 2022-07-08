@@ -72,10 +72,10 @@ void gaussian2(char*file,int len){
     srand(time(0));
     for(int i=0;i<len;i++){
         float m=0;
-        for(int j=0;j<4;j++){
+        for(int j=0;j<80;j++){
             m+=(double)rand()/RAND_MAX;
         }
-        fprintf(fp,"%lf\n",m-2);
+        fprintf(fp,"%lf\n",m-40);
     
     }
     fclose(fp);
