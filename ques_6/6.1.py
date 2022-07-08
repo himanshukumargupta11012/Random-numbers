@@ -2,46 +2,34 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sympy as sy
 import math
-# file=open("gau_gau.dat","r")
-# file=file.readlines()
-# x=sy.Symbol('x')
-# X=np.linspace(-1,17,80)
-# Y=[]
-# for x in X:
-#     l=0
-#     for i in file:
-#         if float(i)<=x:
-#             l+=1
-#     Y.append(l)
 
-X = np.linspace(-1,17,100)#points on the x axis
-simlen = int(1e6) #number of samples
-err = [] #declaring probability list
+X = np.linspace(-1,17,100)
+simlen = int(1e6)
+err = []
 #randvar = np.random.normal(0,1,simlen)
 randvar = np.loadtxt('gau_gau.dat',dtype='double')
-#randvar = np.loadtxt('gau.dat',dtype='double')
-for i in range(0,100):
-	err_ind = np.nonzero(randvar < X[i]) #checking probability condition
-	err_n = np.size(err_ind) #computing the probability
-	err.append(err_n/simlen) #storing the probability values in a list
 
-a=1/2
+for i in range(0,100):
+	err_ind = np.nonzero(randvar < X[i]) 
+	err_n = np.size(err_ind)
+	err.append(err_n/simlen) 
+
+def pdf_num(i):
+    return (err[i+1]-err[i])/(X[i+1]-X[i])
+
 def cdf_the(x):
 
     if x<0:
-        return 1e-5
+        return 0
     if x>=0:
-        return 1-np.exp(-1*a*x)
+        return 1-np.exp(-x/2)
 
 def pdf_the(x):
     if x<0:
         return 0
     else:
-        return a*np.exp(-1*a*x)
+        return np.exp(-x/2)/2
 
-
-def pdf_num(i):
-    return (err[i+1]-err[i])/(X[i+1]-X[i])
 
 plt.plot(X,err,'o')
 plt.plot(X,[cdf_the(x) for x in X])

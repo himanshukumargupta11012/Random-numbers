@@ -3,8 +3,8 @@ import numpy as np
 import math
 import scipy
 
-# file=open("ray.dat","r")
-# file=file.readlines()
+
+randvar = np.loadtxt('ray.dat',dtype='double')
 
 # X=np.linspace(-2,10,50)
 # Y=[]
@@ -16,12 +16,11 @@ import scipy
 #     Y.append(l)
 
 
-X = np.linspace(-2,15,80)#points on the x axis
-simlen = int(1e6) #number of samples
-err = [] #declaring probability list
+X = np.linspace(-2,15,80)
+simlen = int(1e6)
+err = []
 #randvar = np.random.normal(0,1,simlen)
-randvar = np.loadtxt('ray.dat',dtype='double')
-#randvar = np.loadtxt('gau.dat',dtype='double')
+
 for i in range(0,80):
 	err_ind = np.nonzero(randvar < X[i]) #checking probability condition
 	err_n = np.size(err_ind) #computing the probability
@@ -31,7 +30,7 @@ for i in range(0,80):
 def cdf_the(x):
     if x>=0:
         return 1-np.exp(-x/2)
-    elif x<0:
+    else:
         return 0
 
 # print([Z(x) for x in X])

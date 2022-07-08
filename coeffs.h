@@ -65,6 +65,22 @@ void gaussian(char*file,int len){
     }
     fclose(fp);
 }
+
+void gaussian2(char*file,int len){
+    FILE*fp=fopen(file,"w");
+    char str[30];
+    srand(time(0));
+    for(int i=0;i<len;i++){
+        float m=0;
+        for(int j=0;j<4;j++){
+            m+=(double)rand()/RAND_MAX;
+        }
+        fprintf(fp,"%lf\n",m-2);
+    
+    }
+    fclose(fp);
+}
+
 void rayleigh(char *file,char*file2,int len){
     FILE*fp=fopen(file,"w");
     FILE*fp2=fopen(file2,"r");
