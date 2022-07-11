@@ -20,13 +20,14 @@ for j in range(len(gama)):
 		arr[j].append(ber[i]*t+gau[i])
 # ray2[j].append(math.sqrt(-gama[j]*math.log(uni[i])))
 
-def func(gama):
-	arr=[]
-	for i in range(len(gau)):
-		t=math.sqrt(-gama[j]*math.log(uni[i]))
-		arr.append(ber[i]*t+gau[i])
-	return arr
-arr=np.vectorize(func)(gama)
+
+# def func(gam):
+# 	arr=[]
+# 	for i in range(len(gau)):
+# 		t=math.sqrt(-gam*math.log(uni[i]))
+# 		arr.append(ber[i]*t+gau[i])
+# 	return arr
+# arr=np.vectorize(func)(gama)
 
 p_e_num=[]
 for i in range(len(gama)):

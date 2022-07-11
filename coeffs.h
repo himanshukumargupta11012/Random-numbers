@@ -124,6 +124,7 @@ void triangular(char*file,char*file2,char*file3,int len){
 
 }
 void bernoulli(char*file,int len){
+    srand(time(0));
     FILE*fp=fopen(file,"w");
     int m;
     for(int i=0;i<len;i++){
@@ -182,3 +183,16 @@ void chi_2(char*file,int para,int len){
 //         fprintf(fp,"%lf\n",sig*sqrt(-2*log(atof(fgets(str,sizeof(str),fp2)))));
 //     }
 // }
+
+
+void ber_2d(char*file,int len){
+    FILE*fp=fopen(file,'w');
+
+    for(int i=0;i<len;i++){
+
+
+        fprintf(fp,)
+    }
+
+    fclose(fp);
+}
