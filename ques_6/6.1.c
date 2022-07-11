@@ -6,6 +6,7 @@
 int main(){
     // gaussian("gau2.dat",1000000);
     // gau_gau("gau_gau.dat","../ques_2/gau.dat","gau2.dat",1000000);
-    gau_gau("gau_gau3.dat",2,1e6);
+    
+    chi_2("gau_gau4.dat",2,1e6);
     return 0;
 }

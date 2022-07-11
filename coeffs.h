@@ -159,14 +159,14 @@ double gen_gau(){
     return m-6;
 }
 
-void gau_gau(char*file,int para,int len){
+void chi_2(char*file,int para,int len){
     FILE*fp=fopen(file,"w");
 
     for(int i=0;i<len;i++){
         float l=0;
         for(int j=0;j<para;j++){
             double t=gen_gau();
-            l+=t*t;
+            l+=pow(t,2);
         }
         fprintf(fp,"%lf\n",l);
 
