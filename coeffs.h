@@ -4,7 +4,10 @@ float variance(char*file);
 void gaussian(char*file,int len);
 void triangular(char*file,char*file2,char*file3,int len);
 void bernoulli(char*file,int len);
-void gau_gau(char*file,char* file2,char*file3,int len);
+void logarithmic(char *file,char*file2,int len);
+// void gau_gau(char*file,char* file2,char*file3,int len);
+void gau_gau(char*file,int para,int len);
+
 
 void uniform(char*file,int len){
 FILE*fp;
@@ -81,7 +84,7 @@ void gaussian2(char*file,int len){
     fclose(fp);
 }
 
-void rayleigh(char *file,char*file2,int len){
+void logarithmic(char *file,char*file2,int len){
     FILE*fp=fopen(file,"w");
     FILE*fp2=fopen(file2,"r");
     char str[100];
@@ -148,16 +151,35 @@ void ber_gau(char*file,char*file2,char*file3,int len){
     fclose(fp3);
 }
 
-void gau_gau(char*file,char* file2,char*file3,int len){
+void gau_gau(char*file,int para,int len){
     FILE*fp=fopen(file,"w");
-    FILE*fp2=fopen(file2,"r");
-    FILE*fp3=fopen(file3,"r");
-    char str[20],str2[20];
+    // FILE*fp2=fopen(file2,"r");
+    // FILE*fp3=fopen(file3,"r");
+
+    // char str[20],str2[20];
     for(int i=0;i<len;i++){
-        float X1=atof(fgets(str,sizeof(str),fp2));
-        float X2=atof(fgets(str2,sizeof(str2),fp3));
-        fprintf(fp,"%lf\n",X1*X1+X2*X2);
+        float l=0;
+        for(int j=0;j<para;j++){
+                float m=0;
+                for(int k=0;k<12;k++){
+                    m+=(double)rand()/RAND_MAX;
+        }
+            l+=(m-6)*(m-6);
+        }
+        fprintf(fp,"%lf\n",l);
+        // float X1=atof(fgets(str,sizeof(str),fp2));
+        // float X2=atof(fgets(str2,sizeof(str2),fp3));
+        // fprintf(fp,"%lf\n",X1*X1+X2*X2);
     }
     fclose(fp);
-    fclose(fp2);
+    // fclose(fp2);
 }
+
+// void rayleish(char*file,char*file2,int len,float sig){
+//     FILE*fp=fopen(file,'w');
+//     FILE*fp2=fopen(file2,'r');
+//     char str[20];
+//     for(int i=0;i<len;i++){
+//         fprintf(fp,"%lf\n",sig*sqrt(-2*log(atof(fgets(str,sizeof(str),fp2)))));
+//     }
+// }

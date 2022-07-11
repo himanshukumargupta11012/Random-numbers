@@ -7,7 +7,7 @@ X = np.linspace(-1,17,100)
 simlen = int(1e6)
 err = []
 #randvar = np.random.normal(0,1,simlen)
-randvar = np.loadtxt('gau_gau.dat',dtype='double')
+randvar = np.loadtxt('gau_gau2.dat',dtype='double')
 
 for i in range(0,100):
 	err_ind = np.nonzero(randvar < X[i]) 
