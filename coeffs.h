@@ -151,28 +151,27 @@ void ber_gau(char*file,char*file2,char*file3,int len){
     fclose(fp3);
 }
 
+double gen_gau(){
+    double m=0;
+    for(int k=0;k<12;k++){
+        m+=(double)rand()/RAND_MAX;
+    }
+    return m-6;
+}
+
 void gau_gau(char*file,int para,int len){
     FILE*fp=fopen(file,"w");
-    // FILE*fp2=fopen(file2,"r");
-    // FILE*fp3=fopen(file3,"r");
 
-    // char str[20],str2[20];
     for(int i=0;i<len;i++){
         float l=0;
         for(int j=0;j<para;j++){
-                float m=0;
-                for(int k=0;k<12;k++){
-                    m+=(double)rand()/RAND_MAX;
-        }
-            l+=(m-6)*(m-6);
+            double t=gen_gau();
+            l+=t*t;
         }
         fprintf(fp,"%lf\n",l);
-        // float X1=atof(fgets(str,sizeof(str),fp2));
-        // float X2=atof(fgets(str2,sizeof(str2),fp3));
-        // fprintf(fp,"%lf\n",X1*X1+X2*X2);
+
     }
     fclose(fp);
-    // fclose(fp2);
 }
 
 // void rayleish(char*file,char*file2,int len,float sig){

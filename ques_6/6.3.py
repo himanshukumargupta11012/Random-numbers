@@ -4,7 +4,7 @@ import math
 
 X=np.linspace(-1,6,80)
 
-randvar = np.loadtxt('gau_gau.dat',dtype='double')
+randvar = np.loadtxt('gau_gau2.dat',dtype='double')
 
 simlen = int(1e6)
 Y = []
